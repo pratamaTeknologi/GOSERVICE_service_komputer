@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/putih">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:background="@color/biru"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="20sp"
+                    android:fontFamily="@font/opensans_extrabold"
+                    android:text="GOSERVICE"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="5sp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Ahlinya Service laptop,komputer,hardware,software"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    android:layout_margin="20dp"
+                    android:padding="5dp">
+
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/imageslider"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        app:iss_period="1000"
+                        app:iss_delay="1000"
+                        app:iss_corner_radius="10"
+                        app:iss_selected_dot="@drawable/ic_dot"/>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Menu service"
+                android:textColor="@color/biru"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="5"
+                    android:src="@drawable/menuservicekomputer"
+                    android:onClick="kemenuservicelaptop"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="5"
+                    android:src="@drawable/menugantisprepart"
+                    android:onClick="kemenugantisprepart"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="5"
+                    android:src="@drawable/menuinstalasiwindows"
+                    android:onClick="kemenuinstalwindows"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="5"
+                    android:src="@drawable/menuinstalasioffice"
+                    android:onClick="kemenuinstaloffice"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/alamat"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:layout_weight="10"
+                    android:src="@drawable/alamat"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="100dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Kontak"
+                android:textColor="@color/biru"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+            <ImageView
+                android:id="@+id/kewa"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:src="@drawable/nowa"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"/>
+            <ImageView
+                android:id="@+id/keweb"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:src="@drawable/web"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:src="@drawable/tentangapk"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="ketentangaplikasi"
+                android:layout_marginBottom="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
